@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#20272b">
+  <meta name="description" content="Summit Shield Roofing — professional roof inspections, storm damage repairs, and roof replacements.">
+  <title>Summit Shield Roofing | Built to Weather Anything</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="trust-meta"><span>LICENSE # <strong>ROOF-2048-XX</strong></span><i></i><span class="bbb-badge"><b>BBB</b> RATING <strong>A+</strong> <small>PLACEHOLDER</small></span></div>
+      <a class="hotline" href="tel:+15550197777"><span class="hotline-pulse"></span><span><small>24/7 EMERGENCY HOTLINE</small><strong>(555) 019-7777</strong></span><b>↗</b></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Summit Shield Roofing home">
+        <span class="brand-icon"><svg viewBox="0 0 48 48"><path d="M4 24 24 7l20 17M10 21v20h28V21M18 41V27h12v14"/><path d="m17 17 7-6 7 6"/></svg></span>
+        <span><strong>SUMMIT<span>SHIELD</span></strong><small>ROOFING CONTRACTORS</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#services">What We Do</a><a href="#projects">Our Work</a><a href="#insurance">Storm & Insurance</a><a href="#reviews">Reviews</a>
+        <a class="nav-cta" href="#inspection">Get Free Inspection <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image"></div><div class="hero-overlay"></div><div class="hero-grain"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> LOCAL ROOFING. BUILT ON TRUST.</div>
+          <h1>BUILT TO<br>WEATHER <em>ANYTHING.</em></h1>
+          <p class="hero-lead">Your roof is your first line of defense. We bring proven craftsmanship, straight answers, and serious protection to every project.</p>
+          <div class="hero-offer"><div class="offer-icon">17<span>PT</span></div><div><span class="offer-label">NO-COST. NO-PRESSURE.</span><strong>FREE 17-POINT ROOF INSPECTION</strong><small>Know what's overhead before the next storm hits.</small></div><span class="offer-arrow">↘</span></div>
+          <div class="hero-proof"><span>✓ Licensed & insured team</span><span>✓ Workmanship-focused</span><span>✓ Storm damage support</span></div>
+        </div>
+
+        <div class="inspection-card" id="inspection">
+          <div class="form-topline"><span>START YOUR INSPECTION</span><span class="step-counter" id="stepCounter">STEP 01 / 03</span></div>
+          <div class="progress-track"><span id="progressFill"></span></div>
+          <form id="inspectionForm" novalidate>
+            <div class="form-step active" data-step="0">
+              <span class="step-kicker">FIRST, THE BASICS</span><h2>Where can we<br>find your roof?</h2><p>Let's start with a few details so we can help.</p>
+              <label for="customerName">Full name</label><input id="customerName" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+              <label for="customerPhone">Best phone number</label><input id="customerPhone" name="phone" type="tel" placeholder="(555) 000-0000" autocomplete="tel" required>
+              <button type="button" class="btn btn-amber next-step">Next: Property details <span>→</span></button>
+            </div>
+            <div class="form-step" data-step="1">
+              <span class="step-kicker">A LITTLE ABOUT THE PROPERTY</span><h2>Tell us about<br>the place.</h2><p>This helps us prepare for your inspection.</p>
+              <label for="propertyAddress">Property address</label><input id="propertyAddress" name="address" type="text" placeholder="Street address, city" autocomplete="street-address" required>
+              <label for="roofType">Roof type</label><select id="roofType" name="roofType" required><option value="" disabled selected>Select roof type</option><option>Asphalt shingles</option><option>Metal roofing</option><option>Tile or slate</option><option>Flat / low-slope</option><option>Not sure</option></select>
+              <div class="step-actions"><button type="button" class="btn btn-back prev-step">← Back</button><button type="button" class="btn btn-amber next-step">Next: What's happening? <span>→</span></button></div>
+            </div>
+            <div class="form-step" data-step="2">
+              <span class="step-kicker">WHAT CAN WE HELP WITH?</span><h2>What's going<br>on up there?</h2><p>Choose the reason for your inspection.</p>
+              <label for="roofConcern">Reason for inspection</label><select id="roofConcern" name="concern" required><option value="" disabled selected>Choose one</option><option>Storm or hail damage</option><option>Roof leak or water intrusion</option><option>Routine roof check</option><option>Roof replacement estimate</option><option>Buying or selling a home</option><option>Other / not sure</option></select>
+              <label for="extraDetails">Anything we should know? <small>(optional)</small></label><textarea id="extraDetails" name="details" rows="2" placeholder="A quick note about your roof..."></textarea>
+              <div class="step-actions"><button type="button" class="btn btn-back prev-step">← Back</button><button type="submit" class="btn btn-amber">Request My Free Inspection <span>↗</span></button></div>
+            </div>
+          </form>
+          <div class="form-success" id="formSuccess" role="status"><span class="success-mark">✓</span><span class="step-kicker">REQUEST RECEIVED</span><h2>Let's get you<br>covered.</h2><p>Your demo request is ready. Connect this form to your business inbox or CRM to receive real inspection leads.</p><button class="btn btn-amber" id="restartForm">Start another request ↻</button></div>
+          <div class="form-foot"><span>▣ YOUR DETAILS STAY PRIVATE</span><span>NO OBLIGATION</span></div>
+        </div>
+      </div>
+      <div class="container hero-bottom"><span>ROOF REPAIR</span><i></i><span>FULL REPLACEMENT</span><i></i><span>STORM RESTORATION</span><i></i><span>ROOF INSPECTIONS</span></div>
+    </section>
+
+    <section class="stats-strip"><div class="container stats-grid"><div><strong>17-POINT</strong><span>Inspection checklist</span></div><div><strong>24 / 7</strong><span>Emergency hotline</span></div><div><strong>BUILT RIGHT</strong><span>Craftsmanship first</span></div><div><strong>LOCAL TEAM</strong><span>People you can reach</span></div></div></section>
+
+    <section class="services-section section" id="services">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow dark"><span></span> ROOFING WITHOUT THE RUNAROUND</div><h2>PROTECTION FROM<br><em>THE TOP DOWN.</em></h2><p>Whether it's one missing shingle or a roof that's ready for a full reset, we focus on clear communication and solid work.</p></div>
+        <div class="service-grid">
+          <article class="service-card"><span class="service-no">01</span><div class="service-symbol">⌂</div><h3>ROOF REPAIR</h3><p>Track down leaks, damaged shingles, flashing issues, and other trouble spots before they grow.</p><a href="#inspection">SCHEDULE AN INSPECTION <b>↗</b></a></article>
+          <article class="service-card"><span class="service-no">02</span><div class="service-symbol">▰</div><h3>ROOF REPLACEMENT</h3><p>Explore durable roofing options and get a clear plan for a roof built to protect for years.</p><a href="#inspection">GET A ROOFING ESTIMATE <b>↗</b></a></article>
+          <article class="service-card"><span class="service-no">03</span><div class="service-symbol">ϟ</div><h3>STORM DAMAGE</h3><p>Document visible damage and understand repair options after wind, hail, or severe weather.</p><a href="#insurance">SEE HOW IT WORKS <b>↗</b></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section section" id="projects">
+      <div class="container">
+        <div class="projects-heading"><div><div class="eyebrow"><span></span> THE DIFFERENCE IS OVERHEAD</div><h2>FROM WORN OUT<br>TO <em>WEATHER-READY.</em></h2></div><p>Drag the slider to compare a sample roof transformation. Real project photography can be added here.</p></div>
+        <div class="comparison-wrap">
+          <div class="comparison" id="comparison">
+            <div class="comparison-image after-image"><img src="https://images.unsplash.com/photo-1635424710928-9e4c8d6f0a6b?auto=format&fit=crop&w=1500&q=85" alt="Newly installed dark shingle roof, after roofing project" onerror="this.src='https://images.unsplash.com/photo-1635424710928-9e4c8d6f0a6b?auto=format&fit=crop&w=1500&q=85'"></div>
+            <div class="comparison-image before-image" id="beforeImage"><img src="https://images.unsplash.com/photo-1635424710928-9e4c8d6f0a6b?auto=format&fit=crop&w=1500&q=85" alt="Roof before renovation comparison view"></div>
+            <div class="comparison-handle" id="comparisonHandle" role="slider" tabindex="0" aria-label="Before and after image comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span>↔</span></div>
+            <span class="image-label before-label">BEFORE</span><span class="image-label after-label">AFTER</span>
+            <input class="comparison-range" id="comparisonRange" type="range" min="0" max="100" value="50" aria-label="Reveal more of the before image">
+          </div>
+          <div class="comparison-caption"><span>← DRAG TO COMPARE</span><span>SAMPLE PROJECT IMAGE · REPLACE WITH VERIFIED JOB PHOTOS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="insurance-section section" id="insurance">
+      <div class="container insurance-layout">
+        <div class="insurance-copy"><div class="eyebrow"><span></span> AFTER THE STORM, WE'RE IN YOUR CORNER</div><h2>STORM DAMAGE?<br>WE'LL HELP YOU<br><em>FIND THE NEXT STEP.</em></h2><p>Hail and wind damage aren't always obvious from the ground. Our team can inspect your roof, document visible conditions, and explain repair options—so you can make informed decisions.</p><a href="#inspection" class="btn btn-amber">Book a Storm Damage Inspection <span>↗</span></a><small class="insurance-note">We are roofing contractors, not public adjusters or insurance attorneys. Coverage decisions are made by your insurer.</small></div>
+        <div class="process-list">
+          <div class="process-item"><span>01</span><div><h3>INSPECT THE DAMAGE</h3><p>We assess accessible roof areas for signs of wind, hail, and water damage, prioritizing safety.</p></div></div>
+          <div class="process-item"><span>02</span><div><h3>DOCUMENT WHAT WE FIND</h3><p>We can provide photos and a written scope of observed roofing damage for your records.</p></div></div>
+          <div class="process-item"><span>03</span><div><h3>CONTACT YOUR INSURER</h3><p>If you plan to file a claim, contact your insurance company and follow its claim instructions and deadlines.</p></div></div>
+          <div class="process-item"><span>04</span><div><h3>REVIEW REPAIR OPTIONS</h3><p>We explain the roofing work, provide an estimate, and coordinate the repair schedule you approve.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section section" id="reviews">
+      <div class="container">
+        <div class="reviews-heading"><div class="eyebrow dark"><span></span> WORD GETS AROUND</div><h2>GOOD WORK. <em>GOOD WORDS.</em></h2><p>We believe trust is earned one roof—and one homeowner—at a time.</p></div>
+        <div class="reviews-grid">
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span class="review-mark">“</span></div><blockquote>“The crew explained what needed attention, showed us the photos, and kept the project moving. No confusing sales pitch.”</blockquote><div class="review-author"><span class="review-avatar">M</span><div><strong>Michael R.</strong><small>Roof repair customer · Sample review</small></div><span class="verified">CUSTOMER</span></div></article>
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span class="review-mark">“</span></div><blockquote>“After a rough storm, we needed someone to take a proper look. The process was straightforward and the communication was great.”</blockquote><div class="review-author"><span class="review-avatar">T</span><div><strong>Teresa L.</strong><small>Storm inspection · Sample review</small></div><span class="verified">CUSTOMER</span></div></article>
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span class="review-mark">“</span></div><blockquote>“The new roof looks sharp. The team respected our property, cleaned up, and walked us through the finished work.”</blockquote><div class="review-author"><span class="review-avatar">J</span><div><strong>James P.</strong><small>Roof replacement · Sample review</small></div><span class="verified">CUSTOMER</span></div></article>
+        </div>
+        <p class="reviews-disclaimer">Sample testimonials for design demonstration. Replace with genuine customer reviews published with permission.</p>
+      </div>
+    </section>
+
+    <section class="final-cta"><div class="container final-cta-inner"><div><span>DON'T WAIT FOR THE NEXT DOWNPOUR.</span><h2>KNOW WHAT'S OVERHEAD.</h2><p>Book your free 17-point roof inspection today.</p></div><a href="#inspection" class="btn btn-amber">GET MY FREE INSPECTION <b>↗</b></a></div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about"><a class="brand brand-footer" href="#home"><span class="brand-icon"><svg viewBox="0 0 48 48"><path d="M4 24 24 7l20 17M10 21v20h28V21M18 41V27h12v14"/></svg></span><span><strong>SUMMIT<span>SHIELD</span></strong><small>ROOFING CONTRACTORS</small></span></a><p>Roofing built around honest guidance, solid workmanship, and protecting what matters most.</p><a class="footer-hotline" href="tel:+15550197777">24/7 HOTLINE &nbsp; (555) 019-7777</a></div>
+      <div class="footer-column"><h3>WHAT WE DO</h3><a href="#services">Roof Repair</a><a href="#services">Roof Replacement</a><a href="#services">Storm Damage</a><a href="#inspection">Free Roof Inspection</a></div>
+      <div class="footer-column"><h3>COMPANY</h3><a href="#projects">Our Work</a><a href="#insurance">Insurance Assistance</a><a href="#reviews">Customer Reviews</a><a href="#home">Back to Top ↑</a></div>
+      <div class="footer-column footer-contact"><h3>GET IN TOUCH</h3><p>Have a roofing concern? Let's talk through it.</p><a href="tel:+15550197777">(555) 019-7777</a><a href="mailto:hello@summitshield.example">hello@summitshield.example</a><p class="license-foot">LICENSE # ROOF-2048-XX<br>BBB RATING PLACEHOLDER</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Summit Shield Roofing. All rights reserved.</span><span>Built to weather anything.</span></div>
+  </footer>
+</body>
+</html>
